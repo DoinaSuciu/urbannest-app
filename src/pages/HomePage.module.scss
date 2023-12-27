@@ -1,0 +1,294 @@
+@import '../styles/variables.scss';
+@import '../styles/typography.scss';
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .banner-container {
+    img {
+      width: 100%;
+      object-fit: cover;
+      z-index: -1;
+      top: 0;
+    }
+    .banner-text {
+      position: absolute;
+      font-family: Poppins, sans-serif;
+      top: 153px;
+      left: calc(100% - 643px - 58px);
+      width: 643px;
+      padding: 62px 56px 37px 39px;
+      background-color: $secondary-color;
+      border-radius: 10px;
+
+      span {
+        color: $dark-grey;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      .banner-title {
+        color: $primary-color;
+        font-family: Poppins-Bold;
+        font-size: 52px;
+        font-weight: 700;
+        line-height: 65px;
+        margin: 0;
+      }
+
+      p {
+        color: $dark-grey;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        margin: 17px 0 46px 0;
+      }
+
+      // button {
+      //   color: #fff;
+      //   font-size: 16px;
+      //   font-weight: 700;
+      //   text-transform: uppercase;
+      //   padding: 25px 72px;
+      //   background-color: $primary-color;
+      //   border: none;
+      // }
+    }
+  }
+
+  .browse-the-range {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: $dark-grey;
+      margin-top: 30px;
+      font-family: Poppins-Bold;
+    }
+
+    p {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 400;
+      color: $medium-grey;
+      margin-bottom: 55px;
+    }
+    .rooms-list {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      .room-type {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          height: 500px;
+          width: 380px;
+          border-radius: 10px;
+          object-fit: cover;
+          float: left;
+        }
+
+        h3 {
+          text-align: center;
+          font-size: 24px;
+          font-weight: 600;
+          color: $dark-grey;
+        }
+      }
+    }
+  }
+
+  .our-products {
+    margin: 56px 0 69px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      color: #3a3a3a;
+      font-family: 'Poppins-Bold';
+      text-align: center;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 120%;
+      font-style: normal;
+      margin-bottom: 32px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .show-more-container {
+      border: 1px solid $primary-color;
+      width: 245px;
+      height: 48px;
+      background-color: white;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      color: $primary-color;
+    }
+  }
+
+  .beautiful-rooms {
+    background-color: #fcf8f3;
+    padding: 44px 0 44px 100px;
+    display: flex;
+
+    > div {
+      margin-right: 42px;
+
+      h2 {
+        color: $color-gray-1;
+        font-family: Poppins-Bold;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      p {
+        color: $color-gray-2;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 5px 0 25px 0;
+        max-width: 388px;
+      }
+
+      button {
+        width: 176px;
+        height: 48px;
+        border: none;
+        background-color: $primary-color;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+
+    .bedroom-inspiration {
+      position: relative;
+
+      img {
+        width: 404px;
+        height: 582px;
+        object-fit: cover;
+      }
+
+      > div {
+        bottom: 24px;
+        left: 24px;
+
+        .bedroom-inspiration-short-text {
+          padding: 32px 17px 32px 32px;
+          background: rgba(255, 255, 255, 0.72);
+          backdrop-filter: blur(1.5px);
+
+          h3 {
+            color: $color-gray-1;
+            font-size: 28px;
+            font-weight: 600;
+          }
+
+          p {
+            color: $color-gray-2;
+          }
+        }
+
+        button {
+          margin-top: auto;
+          background-color: $primary-color;
+          border: none;
+          color: white;
+          padding: 12px;
+          height: 48px;
+          width: 48px;
+
+          img {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+
+    .slideShow {
+      height: 550px;
+      width: 372px;
+      img {
+        height: 550px;
+        width: 372px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .funiro-furniture-photos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 67px 0 50px;
+
+    p {
+      color: $color-gray-2;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    h2 {
+      color: $color-gray-1;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 700;
+      font-family: Poppins-Bold;
+    }
+
+    .furniro-rooms-photos {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+
+      img {
+        max-width: 451px;
+        max-height: 433px;
+        object-fit: cover;
+      }
+
+      .image1 {
+        width: 295px;
+        height: 392px;
+        object-fit: cover;
+      }
+
+      .image2 {
+        width: 451px;
+        height: 312px;
+        object-fit: cover;
+      }
+
+      .image3 {
+        width: 295px;
+        height: 392px;
+        object-fit: cover;
+      }
+    }
+  }
+}

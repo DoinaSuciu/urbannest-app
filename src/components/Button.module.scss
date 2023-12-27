@@ -1,0 +1,35 @@
+.button {
+  display: flex;
+  align-items: center;
+  background-color: #b88e2f;
+  border: none;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  padding: 25px 72px;
+}
+
+.button:hover {
+  background-color: white;
+  border: 2px solid #b88e2f;
+  cursor: pointer;
+  color: #b88e2f;
+}
+
+.secondaryButton {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #b88e2f;
+  cursor: pointer;
+  color: #b88e2f;
+  padding: 14px 80px;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: #b88e2f;
+  border: none;
+  cursor: pointer;
+  color: white;
+}

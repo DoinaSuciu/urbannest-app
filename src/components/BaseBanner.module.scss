@@ -1,0 +1,31 @@
+.banner {
+  height: 316px;
+  max-width: 1440px;
+  .bannerImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: blur(2px);
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 61px;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 500;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}

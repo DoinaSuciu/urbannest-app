@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+span,
+label,
+input {
+  margin: 0;
+  padding: 0;
+}

@@ -19,7 +19,7 @@ const ProductCard: React.FC<ProductProps> = ({
   discount,
   image,
   price
-}) => {
+}: ProductProps) => {
   const [hover, setHover] = useState(false)
 
   return (

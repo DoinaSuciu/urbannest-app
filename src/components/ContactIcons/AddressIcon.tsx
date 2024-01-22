@@ -1,4 +1,9 @@
-const AddressIcon = ({ width = '22', height = '28' }) => {
+type AddressIconProps = {
+  width?: string
+  height?: string
+}
+
+const AddressIcon = ({ width = '22', height = '28' }: AddressIconProps) => {
   return (
     <svg
       width={width}

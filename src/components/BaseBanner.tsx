@@ -12,7 +12,11 @@ type BaseBannerProps = {
   title: string
 }
 
-const BaseBanner: FC<BaseBannerProps> = ({ title, fromPage, toPage }) => {
+const BaseBanner: FC<BaseBannerProps> = memo(function BaseBanner({
+  title,
+  fromPage,
+  toPage
+}: BaseBannerProps) {
   return (
     <div className={classes.banner}>
       <img className={classes.bannerImg} src={bannerImg} alt="banner" />
@@ -30,6 +34,6 @@ const BaseBanner: FC<BaseBannerProps> = ({ title, fromPage, toPage }) => {
       </div>
     </div>
   )
-}
+})
 
-export default memo(BaseBanner)
+export default BaseBanner

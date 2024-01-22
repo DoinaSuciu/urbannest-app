@@ -1,4 +1,9 @@
-const AdminIcon = ({ width = '20', height = '20' }) => {
+type AdminIconProps = {
+  width?: string
+  height?: string
+}
+
+const AdminIcon = ({ width = '20', height = '20' }: AdminIconProps) => {
   return (
     <svg
       width={width}

@@ -4,7 +4,7 @@ interface Icon {
   onClick: React.MouseEventHandler<HTMLDivElement>
 }
 
-const FilterIcon: React.FC<Icon> = ({ onClick }) => {
+const FilterIcon: React.FC<Icon> = ({ onClick }: Icon) => {
   return (
     <div onClick={onClick} className={classes.icon}>
       <svg

@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react'
+import React, { PropsWithChildren, memo } from 'react'
 import classes from './Button.module.scss'
 
 interface ButtonProps extends PropsWithChildren {
@@ -8,13 +8,13 @@ interface ButtonProps extends PropsWithChildren {
   primarColorButton: boolean
 }
 
-const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<ButtonProps> = memo(function Button({
   onClick,
   type,
   style,
   children,
   primarColorButton = true
-}) => {
+}: ButtonProps) {
   return (
     <button
       style={style}
@@ -25,6 +25,6 @@ const Button: React.FC<ButtonProps> = ({
       {children}
     </button>
   )
-}
+})
 
 export default Button

@@ -1,5 +1,6 @@
 import { useRouteError, isRouteErrorResponse } from 'react-router-dom'
 import PageContent from '../components/PageContent'
+import MainNavigation from '../components/MainNavigation'
 
 const ErrorPage: React.FC = () => {
   const error = useRouteError()
@@ -13,13 +14,14 @@ const ErrorPage: React.FC = () => {
     }
 
     if (error.status === 404) {
-      title = 'Not found!'
+      title = '404  Not found!'
       message = 'Could not find resource or page.'
     }
   }
 
   return (
     <>
+      <MainNavigation />
       <PageContent title={title}>
         <p>{message}</p>
       </PageContent>

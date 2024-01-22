@@ -1,4 +1,4 @@
-import { ChangeEvent, FocusEvent, FC } from 'react'
+import { ChangeEvent, FocusEvent, FC, memo } from 'react'
 import inputClasses from './BaseInput.module.scss'
 
 interface InputProps {
@@ -13,7 +13,7 @@ interface InputProps {
   onBlur: (e: FocusEvent<HTMLInputElement>) => void
 }
 
-const BaseInput: FC<InputProps> = ({
+const BaseInput: FC<InputProps> = memo(function BaseInput({
   type,
   label,
   value,
@@ -23,7 +23,7 @@ const BaseInput: FC<InputProps> = ({
   disabled,
   onChange,
   onBlur
-}) => {
+}: InputProps) {
   return (
     <div className={inputClasses['input-wrapper']}>
       <label className={inputClasses.label} htmlFor={label}>
@@ -40,9 +40,9 @@ const BaseInput: FC<InputProps> = ({
         onBlur={onBlur}
         disabled={disabled}
       />
-      {error && <p className={inputClasses.error}>Input filed can't be empty!</p>}
+      {error && <p className={inputClasses.error}>Input filed can not be empty!</p>}
     </div>
   )
-}
+})
 
 export default BaseInput

@@ -1,4 +1,9 @@
-const WorkingTimeIcon = ({ width = '23', height = '23' }) => {
+type WorkingTimeIconProps = {
+  width?: string
+  height?: string
+}
+
+const WorkingTimeIcon = ({ width = '23', height = '23' }: WorkingTimeIconProps) => {
   return (
     <svg
       width={width}

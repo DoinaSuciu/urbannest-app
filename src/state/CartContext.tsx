@@ -22,7 +22,7 @@ type CartContextProviderProps = {
   children: React.ReactNode
 }
 
-const CartContext = createContext<CartContextType>({
+export const CartContext = createContext<CartContextType>({
   items: [],
   totalAmount: 0,
   addItem: (_item) => {},
@@ -44,21 +44,23 @@ type Action = AddToCartAction | RemoveFromCartAction
 const cartReducer = (state: CartType, action: Action): CartType => {
   if (action.type === 'ADD_TO_CART') {
     const updatedItems = [...state.items]
-    if (state.items.length === 0) {
-      return {
-        items: updatedItems.concat({ ...action.item, quantity: 1 }),
-        totalAmount: state.totalAmount + action.item.price
+    const item = updatedItems.find((item) => item.id === action.item.id)
+    if (item) {
+      const itemIndex = updatedItems.findIndex((item) => item.id === action.item.id)
+      updatedItems[itemIndex] = {
+        ...updatedItems[itemIndex],
+        quantity: updatedItems[itemIndex].quantity + action.item.quantity
       }
-    }
-    const itemIndex = updatedItems.findIndex((item) => item.id === action.item.id)
-    updatedItems[itemIndex] = {
-      ...updatedItems[itemIndex],
-      quantity: updatedItems[itemIndex].quantity + 1
+
+      return {
+        items: updatedItems,
+        totalAmount: state.totalAmount + action.item.price * action.item.quantity
+      }
     }
 
     return {
-      items: updatedItems,
-      totalAmount: state.totalAmount + action.item.price
+      items: [...updatedItems, { ...action.item }],
+      totalAmount: state.totalAmount + action.item.price * action.item.quantity
     }
   }
 

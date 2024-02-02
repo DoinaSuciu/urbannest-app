@@ -1,0 +1,14 @@
+.review {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 207px;
+  margin-bottom: 20px;
+
+  input[type='radio'] {
+    display: none;
+  }
+  p {
+    color: #9f9f9f;
+  }
+}

@@ -11,6 +11,7 @@ export interface ProductProps {
   price: number
   image: string
   discount: number
+  id: string
 }
 
 const ProductCard: React.FC<ProductProps> = ({
@@ -18,7 +19,8 @@ const ProductCard: React.FC<ProductProps> = ({
   shortDescription,
   discount,
   image,
-  price
+  price,
+  id
 }: ProductProps) => {
   const [hover, setHover] = useState(false)
 
@@ -46,21 +48,21 @@ const ProductCard: React.FC<ProductProps> = ({
       </div>
       {hover && (
         <div className={classes['product-card-onHover']}>
-          <button>Add to cart</button>
+          <button>Add to cart </button>
           <div className={classes.links}>
-            <Link to="">
+            <Link to={`/product-view/${id}`}>
               <div>
                 <img src={shareIcon} alt="share" />
                 <span>Share</span>
               </div>
             </Link>
-            <Link to="">
+            <Link to="/">
               <div>
                 <img src={compareIcon} alt="share" />
                 <span>Compare</span>
               </div>
             </Link>
-            <Link to="">
+            <Link to="/">
               <div>
                 <img src={likeIcon} alt="share" />
                 <span>Like</span>

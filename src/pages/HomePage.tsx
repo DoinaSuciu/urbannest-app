@@ -91,13 +91,11 @@ const HomePage = () => {
               image={product.image}
               shortDescription={product.shortDescription}
               discount={product.discount}
+              id={product.id}
             />
           ))}
         </ul>
 
-        {/* <button onClick={showMore} className={classes['show-more-container']}>
-          Show More
-        </button> */}
         <Button
           style={{ weight: 245, height: 48, fontSize: 16 }}
           type="button"

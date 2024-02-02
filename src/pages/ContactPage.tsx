@@ -4,11 +4,8 @@ import AddressIcon from '../components/ContactIcons/AddressIcon'
 import PhoneIcon from '../components/ContactIcons/PhoneIcon'
 import WorkingTimeIcon from '../components/ContactIcons/WorkingTimeIcon'
 import BaseForm from '../components/BaseForm'
-import TrophyIcon from '../components/ContactIcons/TrophyIcon'
-import GuaranteeIcon from '../components/ContactIcons/GuaranteeIcon'
-import ShippingIcon from '../components/ContactIcons/ShippingIcon'
-import CustomerSupportIcon from '../components/ContactIcons/CustomerSupportIcon'
 import BaseBanner from '../components/BaseBanner'
+import QualityDetailsBanner from '../components/QualityDetailsBanner'
 
 const ContactPage = () => {
   return (
@@ -60,37 +57,7 @@ const ContactPage = () => {
           <BaseForm />
         </div>
       </div>
-
-      <div className={classes.qualityInfo}>
-        <div>
-          <TrophyIcon />
-          <div>
-            <h2>High Quality</h2>
-            <p>crafted from top materials</p>
-          </div>
-        </div>
-        <div>
-          <GuaranteeIcon />
-          <div>
-            <h2>Warranty Protection</h2>
-            <p>Over 2 years</p>
-          </div>
-        </div>
-        <div>
-          <ShippingIcon />
-          <div>
-            <h2>Free Shipping</h2>
-            <p>Order over 150 $</p>
-          </div>
-        </div>
-        <div>
-          <CustomerSupportIcon />
-          <div>
-            <h2>24 / 7 Support</h2>
-            <p>Dedicated support</p>
-          </div>
-        </div>
-      </div>
+      <QualityDetailsBanner />
     </div>
   )
 }

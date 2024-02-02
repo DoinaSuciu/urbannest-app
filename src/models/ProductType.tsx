@@ -10,7 +10,8 @@ export interface ProductType {
   images: string[]
   list: {
     color: string
-    quantity: number
+    value: string
+    stock: number
   }[]
   sizes: string[]
   colors: string[]
@@ -18,4 +19,12 @@ export interface ProductType {
   discount: number
   timeStamp: string
   quantitySold: number
+  additionalInformation: string
+  reviews: {
+    id: string
+    name: string
+    rating: number
+    comment: string
+    timeStamp: string
+  }[]
 }

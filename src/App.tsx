@@ -1,5 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { ProductsProvider } from './state/ProductsContext'
+import CartContextProvider from './state/CartContext'
 import RootLayout from './pages/RootLayout'
 import HomePage from './pages/HomePage'
 import ErrorPage from './pages/ErrorPage'
@@ -9,6 +10,7 @@ import ShopPage from './pages/ShopPage'
 import BlogsPage from './pages/BlogsPage'
 import ProductPage from './pages/ProductPage'
 import BlogPostPage from './pages/BlogPostPage'
+import CartPage from './pages/CartPage'
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,10 @@ const router = createBrowserRouter([
         element: <ContactPage />
       },
       {
+        path: 'cart',
+        element: <CartPage />
+      },
+      {
         path: 'blog',
         element: <BlogsPage />
       },
@@ -48,7 +54,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <ProductsProvider>
-      <RouterProvider router={router} />
+      <CartContextProvider>
+        <RouterProvider router={router} />
+      </CartContextProvider>
     </ProductsProvider>
   )
 }

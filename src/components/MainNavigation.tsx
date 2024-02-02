@@ -57,7 +57,9 @@ function MainNavigation() {
             <MyAccountIcon />
             <SearchIcon />
             <WishlistIcon />
-            <CartIcon />
+            <NavLink to="/cart">
+              <CartIcon />
+            </NavLink>
           </div>
         </div>
       </nav>

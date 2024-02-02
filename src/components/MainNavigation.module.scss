@@ -64,6 +64,10 @@ header {
         align-items: center;
         gap: 45px;
         margin-left: 158px;
+        a {
+          display: flex;
+          align-items: center;
+        }
       }
     }
   }

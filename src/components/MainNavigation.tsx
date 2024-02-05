@@ -1,13 +1,16 @@
 import { NavLink } from 'react-router-dom'
+import { useContext } from 'react'
 import logoImage from '../assets/Meubel_House_Logos.png'
 import CartIcon from './Icons/CartIcon'
 import MyAccountIcon from './Icons/MyAccountIcon'
 import WishlistIcon from './Icons/WishlistIcon'
 import SearchIcon from './Icons/SearchIcon'
+import { CartContext } from '../state/CartContext'
 
 import classes from './MainNavigation.module.scss'
 
 function MainNavigation() {
+  const { totalQuantity } = useContext(CartContext)
   return (
     <header className={classes.header}>
       <nav>
@@ -54,12 +57,19 @@ function MainNavigation() {
           </ul>
 
           <div className={classes['icons-nav']}>
-            <MyAccountIcon />
+            <NavLink to="/authentication">
+              <MyAccountIcon />
+            </NavLink>
             <SearchIcon />
             <WishlistIcon />
-            <NavLink to="/cart">
-              <CartIcon />
-            </NavLink>
+            <div className={classes.cart}>
+              <NavLink to="/cart">
+                <CartIcon />
+              </NavLink>
+              {totalQuantity > 0 && (
+                <span className={classes['cart-quantity']}>{totalQuantity}</span>
+              )}
+            </div>
           </div>
         </div>
       </nav>

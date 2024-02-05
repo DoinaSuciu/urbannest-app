@@ -1,0 +1,51 @@
+@import '../styles/variables.scss';
+@import '../styles/typography.scss';
+
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 0 250px 0;
+
+  h1 {
+    margin-bottom: 80px;
+  }
+
+  .auth-selection {
+    display: flex;
+    width: 520px;
+    margin-bottom: 80px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: $secondary-color;
+
+    button {
+      width: 100%;
+      padding: 12px 88px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      background-color: $secondary-color;
+      cursor: pointer;
+    }
+
+    .active {
+      background-color: white;
+    }
+  }
+
+  .login,
+  .register {
+    button {
+      width: 100%;
+      padding: 16px 221px;
+      background-color: black;
+      border: none;
+      font-size: 18px;
+      color: white;
+      text-transform: uppercase;
+      margin-top: 70px;
+    }
+  }
+}

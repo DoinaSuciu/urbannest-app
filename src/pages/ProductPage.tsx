@@ -23,7 +23,7 @@ const ProductPage = () => {
   const [selectedTab, setSelectedTab] = useState('description')
   const params = useParams<{ productId: string }>()
   const { getProduct, getRelatedProducts } = useProducts()
-  const { addItem } = useContext(CartContext)
+  const { addItem, items } = useContext(CartContext)
 
   useEffect(() => {
     if (!params.productId) return
@@ -62,6 +62,7 @@ const ProductPage = () => {
 
   console.log(product)
   console.log(params)
+  console.log(items)
 
   let tabContent = null
 

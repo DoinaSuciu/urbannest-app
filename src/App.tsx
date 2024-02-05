@@ -11,6 +11,7 @@ import BlogsPage from './pages/BlogsPage'
 import ProductPage from './pages/ProductPage'
 import BlogPostPage from './pages/BlogPostPage'
 import CartPage from './pages/CartPage'
+import AuthenticationPage from './pages/AuthenticationPage'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: 'cart',
         element: <CartPage />
+      },
+      {
+        path: 'authentication',
+        element: <AuthenticationPage />
       },
       {
         path: 'blog',

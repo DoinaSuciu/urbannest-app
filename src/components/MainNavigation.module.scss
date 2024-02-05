@@ -68,6 +68,27 @@ header {
           display: flex;
           align-items: center;
         }
+
+        .cart {
+          position: relative;
+
+          span {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99;
+            left: 22px;
+            bottom: 10px;
+            font-size: 15px;
+            font-family: Poppins;
+            font-weight: 600;
+            background-color: #f9f1e7;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+          }
+        }
       }
     }
   }

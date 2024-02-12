@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext, useCallback } from 'react'
+import { FavoritesContext } from '../state/FavoritesContext'
 import Select from 'react-select'
 import shopPageClasses from './ShopPage.module.scss'
 import helpers from '../styles/helpers.module.scss'
@@ -21,6 +22,8 @@ const ShopPage = () => {
   const { products } = useProducts()
   const [sortedItems, setSortedItems] = useState<ProductType[]>([])
   const [showFilter, setShowFilter] = useState(false)
+  const { favoriteProductIds: favoritesProducts, toggleItem } =
+    useContext(FavoritesContext)
 
   useEffect(() => {
     setSortedItems(products)
@@ -29,6 +32,14 @@ const ShopPage = () => {
   const toggleFilter = () => {
     setShowFilter((previousState) => !previousState)
   }
+
+  const isFavorite = useCallback(
+    (id: string) => {
+      const product = favoritesProducts.find((favoriteId) => favoriteId === id)
+      return !!product
+    },
+    [favoritesProducts]
+  )
 
   const enum SortType {
     AllProducts = 'AllProducts',
@@ -201,6 +212,8 @@ const ShopPage = () => {
               image={product.image}
               shortDescription={product.shortDescription}
               discount={product.discount}
+              isFavorite={isFavorite(product.id)}
+              toggleFavorite={toggleItem}
             />
           ))}
         </ul>

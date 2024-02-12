@@ -12,28 +12,43 @@ import ProductCard from '../components/ProductCard'
 import TabButton from '../components/TabButton'
 import Review from '../components/Review'
 import { CartContext } from '../state/CartContext'
+import { FavoritesContext } from '../state/FavoritesContext'
 import { CartProductType } from '../models/CartProductType'
 import Rating from '../components/Rating'
+import { FavoriteIcon } from '../components/Icons/FavoriteIcon'
 
 const ProductPage = () => {
   const [product, setProduct] = useState<ProductType | undefined>()
   const [relatedProducts, setRelatedProducts] = useState<ProductType[]>([])
   const [showItems, setShowItems] = useState(4)
   const [quantityToAddToCart, setQuantityToAddToCart] = useState<number>(1)
+  const [isFavorite, setIsFavorite] = useState(false)
   const [selectedTab, setSelectedTab] = useState('description')
   const params = useParams<{ productId: string }>()
   const { getProduct, getRelatedProducts } = useProducts()
-  const { addItem, items } = useContext(CartContext)
+  const { addItem } = useContext(CartContext)
+  const { toggleItem, favoriteProductIds: favoritesProducts } =
+    useContext(FavoritesContext)
 
   useEffect(() => {
+    console.log(params)
     if (!params.productId) return
     const selectedProduct = getProduct(params.productId)
+
     if (selectedProduct) {
       setProduct(selectedProduct)
       const relatedProductsList = getRelatedProducts(selectedProduct.type)
       setRelatedProducts(relatedProductsList)
     }
-  }, [getProduct, params.productId, getRelatedProducts])
+  }, [getProduct, params.productId, getRelatedProducts, params])
+
+  useEffect(() => {
+    if (product) {
+      const favoriteProduct = favoritesProducts.find((id) => id === product.id)
+      setIsFavorite(!!favoriteProduct)
+    }
+    return
+  }, [favoritesProducts, product])
 
   const addToCart = useCallback(() => {
     if (!product) return
@@ -52,6 +67,11 @@ const ProductPage = () => {
     addItem(cartProduct)
   }, [addItem, product, quantityToAddToCart])
 
+  const toggleFavorites = useCallback(() => {
+    if (!product) return
+    toggleItem(product.id)
+  }, [product, toggleItem])
+
   const onShowMoreProducts = () => {
     setShowItems((previousState) => previousState + 4)
   }
@@ -59,10 +79,6 @@ const ProductPage = () => {
   function handleSelect(tab: string) {
     setSelectedTab(tab)
   }
-
-  console.log(product)
-  console.log(params)
-  console.log(items)
 
   let tabContent = null
 
@@ -163,7 +179,9 @@ const ProductPage = () => {
             <button className={classes['add-to-cart-btn']} onClick={addToCart}>
               Add To Cart
             </button>
-            <button className={classes['compare-btn']}> + Compare</button>
+            <button className={classes['favorite-btn']} onClick={toggleFavorites}>
+              <FavoriteIcon isAddedToFavorite={isFavorite} />
+            </button>
           </div>
           <div className={classes.tags}>
             <p className={classes['tags-title']}>
@@ -237,6 +255,7 @@ const ProductPage = () => {
               image={product.image}
               shortDescription={product.shortDescription}
               discount={product.discount}
+              isFavorite={isFavorite}
             />
           ))}
         </ul>

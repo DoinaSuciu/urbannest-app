@@ -115,6 +115,7 @@
 
       .product-buttons {
         display: flex;
+        align-items: center;
         gap: 16px;
         padding-bottom: 60px;
 
@@ -134,8 +135,7 @@
           }
         }
 
-        .add-to-cart-btn,
-        .compare-btn {
+        .add-to-cart-btn {
           border-radius: 15px;
           border: 1px solid #000;
           background-color: white;
@@ -143,6 +143,18 @@
           font-size: 20px;
           font-family: Poppins;
           cursor: pointer;
+        }
+
+        .favorite-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          background-color: white;
+          cursor: pointer;
+          width: 50px;
+          height: 50px;
+          margin-left: 25px;
         }
 
         .add-to-cart-btn:hover,

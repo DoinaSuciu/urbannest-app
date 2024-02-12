@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import classes from './AuthenticationPage.module.scss'
-import BaseInput from '../components/BaseInput'
 import LoginForm from '../components/auth/LoginForm'
 import SignUpForm from '../components/auth/SignUpForm'
 export default function MyAccountPage() {

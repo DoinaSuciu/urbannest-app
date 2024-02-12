@@ -61,7 +61,10 @@ function MainNavigation() {
               <MyAccountIcon />
             </NavLink>
             <SearchIcon />
-            <WishlistIcon />
+            <NavLink to="/favorites">
+              <WishlistIcon />
+            </NavLink>
+
             <div className={classes.cart}>
               <NavLink to="/cart">
                 <CartIcon />

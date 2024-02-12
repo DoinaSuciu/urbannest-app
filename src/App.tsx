@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { ProductsProvider } from './state/ProductsContext'
 import CartContextProvider from './state/CartContext'
+import FavoritesContextProvider from './state/FavoritesContext'
 import RootLayout from './pages/RootLayout'
 import HomePage from './pages/HomePage'
 import ErrorPage from './pages/ErrorPage'
@@ -12,6 +13,7 @@ import ProductPage from './pages/ProductPage'
 import BlogPostPage from './pages/BlogPostPage'
 import CartPage from './pages/CartPage'
 import AuthenticationPage from './pages/AuthenticationPage'
+import WishListPage from './pages/WishListPage'
 
 const router = createBrowserRouter([
   {
@@ -41,6 +43,10 @@ const router = createBrowserRouter([
         element: <CartPage />
       },
       {
+        path: 'favorites',
+        element: <WishListPage />
+      },
+      {
         path: 'authentication',
         element: <AuthenticationPage />
       },
@@ -60,7 +66,9 @@ function App() {
   return (
     <ProductsProvider>
       <CartContextProvider>
-        <RouterProvider router={router} />
+        <FavoritesContextProvider>
+          <RouterProvider router={router} />
+        </FavoritesContextProvider>
       </CartContextProvider>
     </ProductsProvider>
   )

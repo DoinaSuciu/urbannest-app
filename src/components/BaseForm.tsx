@@ -90,7 +90,7 @@ const BaseForm: FC = () => {
           event.preventDefault()
         }}
         style={{ weight: 237, height: 55, fontSize: 16 }}
-        primarColorButton
+        primaryColorButton
       >
         Submit
       </Button>

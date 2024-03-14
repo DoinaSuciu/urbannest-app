@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useContext, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useProducts } from '../state/ProductsContext'
+import { FavoritesContext } from '../state/FavoritesContext'
 import Carousel from 'nuka-carousel'
 import ProductCard from '../components/ProductCard'
 import Button from '../components/Button'
@@ -27,13 +28,24 @@ import helpers from '../styles/helpers.module.scss'
 const HomePage = () => {
   const navigate = useNavigate()
   const { products } = useProducts()
+  const { favoriteProductIds: favoritesProducts, toggleItem } =
+    useContext(FavoritesContext)
   const shopNow = () => {
     navigate('/shop')
   }
-  const [numberOfitemsShown, setNumberOfItemsToShown] = useState(8)
+
+  const isFavorite = useCallback(
+    (id: string) => {
+      const product = favoritesProducts.find((favoriteId) => favoriteId === id)
+      return !!product
+    },
+    [favoritesProducts]
+  )
+
+  const [numberOfItemsShown, setNumberOfItemsToShown] = useState(8)
   const showMore = () => {
-    if (numberOfitemsShown + 8 <= products.length) {
-      setNumberOfItemsToShown(numberOfitemsShown + 8)
+    if (numberOfItemsShown + 8 <= products.length) {
+      setNumberOfItemsToShown(numberOfItemsShown + 8)
     } else {
       setNumberOfItemsToShown(products.length)
     }
@@ -54,7 +66,7 @@ const HomePage = () => {
             style={{ weight: 222, height: 74, fontSize: 16 }}
             type="button"
             onClick={shopNow}
-            primarColorButton
+            primaryColorButton
           >
             Shop now
           </Button>
@@ -83,15 +95,17 @@ const HomePage = () => {
       <div className={classes['our-products']}>
         <h2>Our products</h2>
         <ul>
-          {products.slice(0, numberOfitemsShown).map((product) => (
+          {products.slice(0, numberOfItemsShown).map((product) => (
             <ProductCard
+              id={product.id}
               key={product.id}
               name={product.name}
               price={product.price}
               image={product.image}
               shortDescription={product.shortDescription}
               discount={product.discount}
-              id={product.id}
+              isFavorite={isFavorite(product.id)}
+              toggleFavorite={toggleItem}
             />
           ))}
         </ul>
@@ -100,7 +114,7 @@ const HomePage = () => {
           style={{ weight: 245, height: 48, fontSize: 16 }}
           type="button"
           onClick={showMore}
-          primarColorButton={false}
+          primaryColorButton={false}
         >
           Show More
         </Button>
@@ -110,7 +124,7 @@ const HomePage = () => {
         <div>
           <h2>50+ Beautiful rooms inspiration</h2>
           <p>
-            Our designer already made a lot of beautiful prototipe of rooms that inspire
+            Our designer already made a lot of beautiful prototype of rooms that inspire
             you
           </p>
           <button>Explore More</button>
@@ -138,7 +152,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={classes['funiro-furniture-photos']}>
+      <div className={classes['furniro-furniture-photos']}>
         <p>Share your setup with</p>
         <h2>#FurniroFurniture</h2>
         <div className={classes['furniro-rooms-photos']}>

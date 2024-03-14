@@ -38,7 +38,7 @@ function CartPage() {
             }}
             type="button"
             onClick={goToShoppingPage}
-            primarColorButton
+            primaryColorButton
           >
             Go shopping
           </Button>
@@ -105,7 +105,7 @@ function CartPage() {
               <span className={classes.total}>$ {totalAmount}</span>
             </div>
             <Button
-              primarColorButton
+              primaryColorButton
               style={{
                 fontSize: 20,
                 borderRadius: 15,

@@ -5,7 +5,7 @@ interface ButtonProps extends PropsWithChildren {
   onClick: React.MouseEventHandler<HTMLButtonElement>
   type: 'button' | 'submit' | 'reset'
   style: object
-  primarColorButton: boolean
+  primaryColorButton: boolean
 }
 
 const Button: React.FC<ButtonProps> = memo(function Button({
@@ -13,14 +13,14 @@ const Button: React.FC<ButtonProps> = memo(function Button({
   type,
   style,
   children,
-  primarColorButton = true
+  primaryColorButton: primaryColorButton = true
 }: ButtonProps) {
   return (
     <button
       style={style}
       onClick={onClick}
       type={type}
-      className={primarColorButton ? classes.button : classes.secondaryButton}
+      className={primaryColorButton ? classes.button : classes.secondaryButton}
     >
       {children}
     </button>

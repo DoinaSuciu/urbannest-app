@@ -1,4 +1,5 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
 import { ProductsProvider } from './state/ProductsContext'
 import CartContextProvider from './state/CartContext'
 import FavoritesContextProvider from './state/FavoritesContext'
@@ -14,6 +15,7 @@ import BlogPostPage from './pages/BlogPostPage'
 import CartPage from './pages/CartPage'
 import AuthenticationPage from './pages/AuthenticationPage'
 import WishListPage from './pages/WishListPage'
+import { store } from './state/store'
 
 const router = createBrowserRouter([
   {
@@ -64,13 +66,15 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <ProductsProvider>
-      <CartContextProvider>
-        <FavoritesContextProvider>
-          <RouterProvider router={router} />
-        </FavoritesContextProvider>
-      </CartContextProvider>
-    </ProductsProvider>
+    <Provider store={store}>
+      <ProductsProvider>
+        <CartContextProvider>
+          <FavoritesContextProvider>
+            <RouterProvider router={router} />
+          </FavoritesContextProvider>
+        </CartContextProvider>
+      </ProductsProvider>
+    </Provider>
   )
 }
 export default App

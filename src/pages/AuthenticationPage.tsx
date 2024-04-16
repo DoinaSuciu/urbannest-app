@@ -7,7 +7,7 @@ export default function MyAccountPage() {
 
   return (
     <div className={classes['auth-page']}>
-      <h1>My Account</h1>
+      <h1>Contul meu</h1>
       <div className={classes['auth-selection']}>
         <button
           className={currentSelection === 'login' ? classes.active : ''}
@@ -19,7 +19,7 @@ export default function MyAccountPage() {
           className={currentSelection === 'register' ? classes.active : ''}
           onClick={() => setCurrentSelection('register')}
         >
-          Register
+          Înregistrează-te
         </button>
       </div>
 

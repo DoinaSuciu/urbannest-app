@@ -63,8 +63,8 @@ export default function Register() {
     <form className={classes.register} onSubmit={handleSubmit}>
       <BaseInput
         type="text"
-        label="Your name"
-        placeholder="John"
+        label="Prenumele"
+        placeholder="Ion"
         name="name"
         error={nameHasError}
         value={enteredName}
@@ -74,7 +74,7 @@ export default function Register() {
 
       <BaseInput
         type="text"
-        label="Your surname"
+        label="Numele"
         placeholder="Travolta"
         name="surname"
         error={surnameHasError}
@@ -96,8 +96,8 @@ export default function Register() {
 
       <BaseInput
         type="password"
-        label="Password"
-        placeholder="Enter your password"
+        label="Parola"
+        placeholder="Introdeceți parola"
         name="password"
         error={passwordHasError}
         value={enteredPassword}
@@ -107,8 +107,8 @@ export default function Register() {
 
       <BaseInput
         type="number"
-        label="Your phone number"
-        placeholder="phone number"
+        label="Numărul de telefon"
+        placeholder="0726564896"
         name="phone"
         error={phoneHasError}
         value={enteredPhone}
@@ -116,7 +116,7 @@ export default function Register() {
         onBlur={handlePhoneBlur}
       />
 
-      <button>Sign in</button>
+      <button>Înregistrează-te</button>
     </form>
   )
 }

@@ -14,10 +14,11 @@ const ContactPage = () => {
 
       <div className={classes.content}>
         <div className={classes.info}>
-          <h2>Get In Touch WIth Us</h2>
+          <h2>Contactează-ne</h2>
           <p>
-            For More Information About Our Product & Services. Please Feel Free To Drop Us
-            An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!
+            Pentru mai multe informații despre produsele și serviciile noastre. Vă rugăm
+            să nu ezitați să ne trimiteți un e-mail. Personalul nostru este întotdeauna
+            aici pentru a vă ajuta. Nu ezita!
           </p>
         </div>
 
@@ -26,30 +27,30 @@ const ContactPage = () => {
             <div className={classes.detailContainer}>
               <AddressIcon width="30" height="30" />
               <div className={classes.details}>
-                <h3>Address</h3>
+                <h3>Adresa</h3>
                 <p>
-                  1234 North Main Street New York, NY 22222 <br />
-                  United States
+                  Chișinău, strada București nr.2 <br />
+                  Republica Moldova
                 </p>
               </div>
             </div>
             <div className={classes.detailContainer}>
               <PhoneIcon />
               <div className={classes.details}>
-                <h3>Phone</h3>
+                <h3>Telefon</h3>
                 <p>
-                  1.800.555.6789 <br />
-                  1.800.555.6789
+                  068-28-00-22 <br />
+                  022-02-02-02
                 </p>
               </div>
             </div>
             <div className={classes.detailContainer}>
               <WorkingTimeIcon width="30" height="30" />
               <div className={classes.details}>
-                <h3>Working Time</h3>
+                <h3>Serviciul cu clienții</h3>
                 <p>
-                  Mon - Fri: 8:00 - 19:00 <br />
-                  Sat: 9:00 - 15:00{' '}
+                  Lun - Vin: 8:00 - 19:00 <br />
+                  Sam: 9:00 - 15:00{' '}
                 </p>
               </div>
             </div>

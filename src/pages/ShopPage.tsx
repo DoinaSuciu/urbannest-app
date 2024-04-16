@@ -91,27 +91,27 @@ const ShopPage = () => {
 
   return (
     <div className={shopPageClasses.shopPage}>
-      <BaseBanner fromPage="Home" toPage="Shop" title="Shop" />
+      <BaseBanner fromPage="Home" toPage="Produse" title="Produse" />
 
       <div className={shopPageClasses.controlPanel}>
         <div className={shopPageClasses.controlPanelFilter}>
           <div className={shopPageClasses.controlPanelFilterIcons}>
             <FilterIcon onClick={toggleFilter} />
-            <span>Filter</span>
+            <span>Filtrează</span>
             <ViewLargeItemsList />
             <ViewListIcon />
           </div>
           <img src={separatorLine} alt="separator" />
-          <span>Showing 1-16 of 32 results</span>
+          <span>Vizualizare 1-16 din 32 rezultate</span>
         </div>
         <div className={shopPageClasses.controlPanelSort}>
           <div className={shopPageClasses.showItems}>
-            <span className={shopPageClasses.itemsOnPageTitle}>Show</span>
+            <span className={shopPageClasses.itemsOnPageTitle}>Arată</span>
             <span className={shopPageClasses.itemsOnPage}>{sortedItems.length}</span>
           </div>
 
           <div className={helpers['flex-center']}>
-            <span className={shopPageClasses.sortBy}>Sort by</span>
+            <span className={shopPageClasses.sortBy}>Sortează după</span>
             <Select
               className={shopPageClasses.select}
               isMulti={false}

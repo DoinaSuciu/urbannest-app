@@ -25,7 +25,7 @@ function CartPage() {
       {items.length === 0 && (
         <div className={classes['empty-cart-container']}>
           <img src={emptyCartImg} alt="Empty cart" />
-          <h2>Your cart is empty</h2>
+          <h2>Coșul tău este gol.</h2>
 
           <p>Looks like you have not added anything to your cart.</p>
           <Button
@@ -48,9 +48,9 @@ function CartPage() {
       {items.length > 0 && (
         <div className={classes['cart-with-products']}>
           <div className={classes['cart-list']}>
-            <span className={`${classes.box} ${classes.header}`}>Product</span>
-            <span className={`${classes.box} ${classes.header}`}>Price</span>
-            <span className={`${classes.box} ${classes.header}`}>Quantity</span>
+            <span className={`${classes.box} ${classes.header}`}>Produsul</span>
+            <span className={`${classes.box} ${classes.header}`}>Prețul</span>
+            <span className={`${classes.box} ${classes.header}`}>Cantitatea</span>
             <span className={`${classes.box} ${classes.header}`}>Subtotal</span>
 
             {items.map((item) => (
@@ -89,15 +89,16 @@ function CartPage() {
             ))}
           </div>
           <div className={classes['total-container']}>
-            <h2>Cart Totals</h2>
+            <h2>Total coș</h2>
             <div className={classes['total-row']}>
               <span className={classes['row-header']}>Subtotal</span>
               <span className={classes.subtotal}>$ {totalAmount}</span>
             </div>
             <div className={classes['total-row']}>
-              <span className={classes['row-header']}>Shipping</span>
+              <span className={classes['row-header']}>Transport</span>
               <p className={classes.shipping}>
-                Shipping costs will be calculated once you have provided address.
+                Costul transportului va fi calculat imediat dupa furnizarea adresei de
+                livrare.
               </p>
             </div>
             <div className={classes['total-row']}>

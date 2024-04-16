@@ -6,10 +6,8 @@ const MainFooter = () => {
     <footer>
       <div className={classes['main-container']}>
         <section className={classes.details}>
-          <h3>furniro.</h3>
-          <p className={classes.address}>
-            400 University Drive Suite 200 Coral Gables, FL 33134 USA
-          </p>
+          <h3>URBANNEST</h3>
+          <p className={classes.address}>Republica Moldova, Chișinău, str. București 2</p>
         </section>
         <section className={classes.links}>
           <span className={classes['section-name']}>Links</span>
@@ -17,10 +15,10 @@ const MainFooter = () => {
             <h4>Home</h4>
           </Link>
           <Link to="/about">
-            <h4>About</h4>
+            <h4>Despre noi</h4>
           </Link>
           <Link to="/shop">
-            <h4>Shop</h4>
+            <h4>Produse</h4>
           </Link>
           <Link to="/contact">
             <h4>Contact</h4>
@@ -28,15 +26,15 @@ const MainFooter = () => {
         </section>
 
         <section className={classes.help}>
-          <span className={classes['section-name']}>Help</span>
+          <span className={classes['section-name']}>Informații</span>
           <Link to="">
-            <h4>Payment Options</h4>
+            <h4>Opțiuni de plată</h4>
           </Link>
           <Link to="">
-            <h4>Returns</h4>
+            <h4>Retururi</h4>
           </Link>
           <Link to="">
-            <h4>Privacy Policies</h4>
+            <h4>Politica de confidențialitate</h4>
           </Link>
         </section>
         <section className={`${classes['section-name']} ${classes.newsletter}`}>
@@ -49,7 +47,7 @@ const MainFooter = () => {
         </section>
       </div>
       <div className={classes.rights}>
-        <p>2023 furniro. All rights reserved</p>
+        <p>2024 URBANNEST. All rights reserved</p>
       </div>
     </footer>
   )

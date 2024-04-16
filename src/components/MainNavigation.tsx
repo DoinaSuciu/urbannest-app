@@ -16,7 +16,7 @@ function MainNavigation() {
       <nav>
         <div className={classes['logo-container']}>
           <img src={logoImage} alt="Logo" />
-          <h2 className={classes['logo-text']}>furniro.</h2>
+          <h2 className={classes['logo-text']}>URBANNEST</h2>
         </div>
 
         <div>
@@ -35,7 +35,7 @@ function MainNavigation() {
                 to="/shop"
                 className={({ isActive }) => (isActive ? classes.active : undefined)}
               >
-                Shop
+                Produse
               </NavLink>
             </li>
             <li>
@@ -43,7 +43,7 @@ function MainNavigation() {
                 to="/blog"
                 className={({ isActive }) => (isActive ? classes.active : undefined)}
               >
-                Blog
+                Inspiră-te
               </NavLink>
             </li>
             <li>

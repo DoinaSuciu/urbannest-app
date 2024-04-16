@@ -24,46 +24,24 @@ export const BlogCategories: { id: string; name: string }[] = [
   },
   {
     id: 'BC005',
-    name: 'Wood'
+    name: 'Lemn'
   }
 ]
 
 export const BlogPosts: BlogType[] = [
   {
     id: 'BP01',
-    title: 'Going all-in with millennial design',
-    description: `The following post is brought to you by and the. Our partners are hand picked by the Design Milk team because
-     they represent the best in design. Just as Lexus went all in on their new sport sedan, the designers featured here go
-     all in on their passion.`,
-    contentOne: `One doesn't normally evoke the worlds of interior design and professional basketball in the same breath, but there's undeniably a bit
-    of the Kobe Bryant story in Ryan Saghian's path. Just as Kobe was a young star who went straight from high school to playing professionally
-    in the NBA, Ryan was also very young when he made the leap to starting his own design studio. Today the 28-year old Angeleno stands as both
-    a young talent and an established name/brand unto himself, the embodiment of an all-in ethos now sought for his masterful ability to marry
-    Old Hollywood glamor with an energized Millennial modernity in rooms exuding an authentic lived-in atmosphere. Like his immortalized hoops
-    counterpart, Saghian's journey toward fame and success within the design industry follows an unconventional path.
+    title: 'Mergând all-in cu design milenial',
+    description: `Partenerii noștri sunt aleși manual de echipa Design Milk, deoarece reprezintă cel mai bun design. La fel cum Lexus s-a implicat în noul lor sedan sport, designerii prezentați aici își pun totul în pasiunea lor.`,
+    contentOne: `În mod normal, nu evocă lumile designului interior și baschetul profesionist în aceeași suflare, dar există, fără îndoială, un pic din povestea lui Kobe Bryant în calea lui Ryan Saghian. Așa cum Kobe a fost o tânără vedetă care a trecut direct de la liceu pentru a juca profesionist în NBA, Ryan era și foarte tânăr când a făcut saltul spre a-și înființa propriul studio de design. Astăzi, Angeleno, în vârstă de 28 de ani, este atât un tânăr talent, cât și un nume/brand consacrat pentru el însuși, întruchiparea unui ethos all-in căutat acum pentru capacitatea sa magistrală de a căsători glamourul vechiului Hollywood cu o modernitate milenară energizantă în camere care emană un atmosferă autentică trăită. La fel ca omologul său imortalizat cu cercuri, călătoria lui Saghian către faimă și succes în industria designului urmează o cale neconvențională.
 
-    Similar to the late iconoclast, Saghian would proclaim his intent to become a designer early on, exuding a rare and intense passion that
-    belied his age. “I was lucky enough to know what I wanted to do at a very early age and wasted no time getting started,” he admits.
+    Asemănător cu regretatul iconoclast, Saghian și-a proclamat intenția de a deveni designer de timpuriu, emanând o pasiune rară și intensă care îi contrazice vârsta. „Am fost destul de norocos să știu ce vreau să fac la o vârstă foarte fragedă și nu am pierdut timpul să încep”, recunoaște el.
 
-    Similar to the late iconoclast, Saghian would proclaim his intent to become a designer early on, exuding a rare and intense passion that belied his age.
-    “I was lucky enough to know what I wanted to do at a very early age and wasted no time getting started,” he admits.`,
-    contentTwo: `While most 15-year olds have yet to plot a course toward college – let alone the semblance of a career path – a young Saghian began working
-    at Los Angeles award-winning firm, Woodson & Rummerfield House of Design as an intern throughout high school before enrolling at the Art Institute of
-    California where he would graduate with a degree in Interior Architecture. Young designers are typically expected to toil under the tutelage of senior
-    talent for several years, to gain experience but also abide by an industry that expects youth to pay dues.
-    Saghian would instead push all of his chips into the game in his early twenties, launching his own design studio, Ryan Saghian Interiors, from his parent’s garage.
-    He would quickly outgrow those salad days, leveraging social media to build up interest and eventually securing enough work to turn a dream into a profitable reality.`,
-    contentThree: `With an eye adept for tailoring opulence beyond superficial extravagance, Saghian’s work encapsulates everything from furnishings, wall treatments and rugs
-    of his own design, including a signature scent inspired by a favorite childhood memory revived in scented candle form. This emotional memory is consistent throughout Saghian’s
-    work, whether designing a space or an object.
-    “My approach to design is all about feeling. Creativity comes from the heart, it’s intuitive,” explains Saghian, “I create spaces that are pouring with self-expression, and that’s
-    the identifiable Ryan Saghian experience.”
-    Ryan Saghian Home is arguably the designer’s purest expression of his vision of “infusing classic DNA into contemporary pieces” – a home collection inspired by his travels and excursions
-    rummaging through countless thrift stores, flea markets and trading posts. “My dream has always been to design as many beautiful homes as possible, and with my own line of furnishings,
-    wallpaper, dinnerware and more, people all over the country and world can have a bit of my design to enhance their space.”
-    The confidently modern designer, one unapologetically devout to his own bold and sumptuous vision of the good life, has aspirations to one day apply his signature style beyond a rug,
-    room or even across a residence. “I want to dive into hospitality. Could you imagine a Ryan Saghian designed hotel, restaurant or bar? A DREAM!”
-    `,
+     Asemănător cu regretatul iconoclast, Saghian și-a proclamat intenția de a deveni designer de timpuriu, emanând o pasiune rară și intensă care îi contrazice vârsta.
+     „Am fost destul de norocos să știu ce vreau să fac la o vârstă foarte fragedă și nu am pierdut timpul să încep”, recunoaște el.`,
+    contentTwo: `În timp ce majoritatea tinerilor de 15 ani încă nu au pus la cale un curs spre facultate – să nu mai vorbim de aparența unei cariere – un tânăr Saghian a început să lucreze la firma premiată din Los Angeles, Woodson & Rummerfield House of Design, ca stagiar pe tot parcursul liceului. înscriindu-se la Institutul de Artă din California unde avea să absolve o diplomă în arhitectură de interior. De obicei, se așteaptă ca tinerii designeri să muncească sub tutela talentelor seniori timp de câțiva ani, pentru a câștiga experiență, dar și pentru a respecta o industrie care așteaptă ca tinerii să plătească taxe. În schimb, Saghian și-a împins toate jetoanele în joc la începutul lui de 20 de ani, lansând propriul său studio de design, Ryan Saghian Interiors, din garajul părintelui său. El ar depăși rapid acele zile de salată, valorificând rețelele sociale pentru a crește interesul și, în cele din urmă, asigurând suficientă muncă pentru a transforma un vis într-o realitate profitabilă.`,
+    contentThree: `Cu un ochi adept pentru a croi opulența dincolo de extravaganța superficială, munca lui Saghian încapsulează totul, de la mobilier, tratamente pentru pereți și covoare cu design propriu, inclusiv un parfum inspirat de o amintire preferată din copilărie reînviată sub formă de lumânare parfumată. Această memorie emoțională este consecventă de-a lungul lucrării lui Saghian, fie că proiectează un spațiu sau un obiect. „Abordarea mea față de design se referă la sentiment. Creativitatea vine din inimă, este intuitivă”, explică Saghian, „creez spații care se revarsă cu auto-exprimare, iar aceasta este experiența identificabilă Ryan Saghian.” Ryan Saghian Home este, fără îndoială, cea mai pură expresie a designerului a viziunii sale de „infuzare a ADN-ului clasic în piesele contemporane” – o colecție de casă inspirată de călătoriile și excursiile sale care scotocesc prin nenumărate magazine de second hand, piețe de vechituri și posturi comerciale. „Visul meu a fost întotdeauna să proiectez cât mai multe case frumoase posibil și, cu propria mea linie de mobilier, tapet, vesela și multe altele, oamenii din toată țara și din lume pot avea un pic din designul meu pentru a-și îmbunătăți spațiul.”
+    Designerul modern încrezător, unul devotat fără scuze propriei viziuni îndrăznețe și somptuoase asupra vieții bune, are aspirații să-și aplice într-o zi stilul semnătură dincolo de un covor, cameră sau chiar peste o reședință. „Vreau să mă scufund în ospitalitate. Vă puteți imagina un hotel, restaurant sau bar proiectat de Ryan Saghian? UN VIS!"`,
     image: image01,
     date: '2021-01-01',
     category: 'Wood',
@@ -71,7 +49,7 @@ export const BlogPosts: BlogType[] = [
   },
   {
     id: 'BP02',
-    title: 'Exploring new ways of decorating',
+    title: 'Explorând noi moduri de a decora',
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at
     ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis

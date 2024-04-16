@@ -92,8 +92,10 @@ const ProductPage = () => {
         <>
           <p className={classes['description-details']}>{product.description}</p>
           <div className={classes['description-photos']}>
-            <img src={product.images[2]} alt={`${product.name} 2`} />
-            <img src={product.images[3]} alt={`${product.name} 3`} />
+            <img src={product?.images[1]} alt={`${product?.name} 1`} />
+            {product?.images[2] && (
+              <img src={product?.images[2]} alt={`${product?.name} 2`} />
+            )}
           </div>
         </>
       )
@@ -122,7 +124,7 @@ const ProductPage = () => {
       <div className={classes['paths-bar']}>
         <span className={classes.path}>Home</span>
         <img src={arrowIcon} />
-        <span className={classes.path}>Shop</span>
+        <span className={classes.path}>Produse</span>
         <img src={arrowIcon} />
         <img src={separator} />
         <span>{product?.name}</span>
@@ -136,27 +138,31 @@ const ProductPage = () => {
             <Rating selectedRating={product.rating} />
             <div className={classes.separator}></div>
             <span className={classes['reviews-numbers']}>
-              {product?.reviews.length} Customer Reviews
+              {product?.reviews.length} Review-uri
             </span>
           </div>
           <p>{product?.description}</p>
           <div className={classes['size-container']}>
-            <span>Size</span>
+            <span>Mărimea</span>
             <div className={classes['size-list']}>
               {product?.sizes.map((size) => (
                 <button key={size}>{size}</button>
               ))}
             </div>
           </div>
-          <div className={classes['color-container']}>
-            <span>Color</span>
-
-            <div className={classes['colors-list']}>
-              {product.list.map((item) => (
-                <button key={item.color} style={{ backgroundColor: item.value }}></button>
-              ))}
+          {product.list.length > 1 && (
+            <div className={classes['color-container']}>
+              <span>Culoarea</span>
+              <div className={classes['colors-list']}>
+                {product.list.map((item) => (
+                  <button
+                    key={item.color}
+                    style={{ backgroundColor: item.value }}
+                  ></button>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
           <div className={classes['product-buttons']}>
             <div className={classes['quantity-adjust']}>
               <button
@@ -177,7 +183,7 @@ const ProductPage = () => {
             </div>
 
             <button className={classes['add-to-cart-btn']} onClick={addToCart}>
-              Add To Cart
+              Adaugă în coș
             </button>
             <button className={classes['favorite-btn']} onClick={toggleFavorites}>
               <FavoriteIcon isAddedToFavorite={isFavorite} />
@@ -186,9 +192,9 @@ const ProductPage = () => {
           <div className={classes.tags}>
             <p className={classes['tags-title']}>
               <span>SKU</span>
-              <span>Category</span>
-              <span>Tags</span>
-              <span>Share</span>
+              <span>Categorie</span>
+              <span>Tag-uri</span>
+              <span>Distribuie</span>
             </p>
 
             <div className={classes['tags-details']}>
@@ -225,26 +231,26 @@ const ProductPage = () => {
             isSelected={selectedTab === 'description'}
             onSelect={() => handleSelect('description')}
           >
-            Description
+            Descriere
           </TabButton>
           <TabButton
             isSelected={selectedTab === 'additionalInfo'}
             onSelect={() => handleSelect('additionalInfo')}
           >
-            Additional Information
+            Informații suplimentare
           </TabButton>
           <TabButton
             isSelected={selectedTab === 'reviews'}
             onSelect={() => handleSelect('reviews')}
           >
-            Reviews [{product.reviews.length}]
+            Review-uri [{product.reviews.length}]
           </TabButton>
         </div>
         {tabContent}
       </div>
 
       <div className={classes['related-products']}>
-        <h2>Related Products</h2>
+        <h2>Recomandate</h2>
         <ul>
           {relatedProducts.slice(0, showItems).map((product) => (
             <ProductCard
@@ -261,7 +267,7 @@ const ProductPage = () => {
         </ul>
         {showItems < relatedProducts.length && (
           <button className={classes['show-more-btn']} onClick={onShowMoreProducts}>
-            Show More
+            Arată mai multe
           </button>
         )}
         <div>

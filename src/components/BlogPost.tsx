@@ -44,7 +44,7 @@ const BlogPost: FC<BlogPostProps> = ({
     </div>
     <h1>{title}</h1>
     <p>{description}</p>
-    <Link to={`${id}`}>Read more</Link>
+    <Link to={`${id}`}>Citește mai mult</Link>
   </div>
 )
 

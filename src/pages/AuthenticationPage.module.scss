@@ -21,13 +21,14 @@
 
     button {
       width: 100%;
-      padding: 12px 88px;
+      padding: 20px 60px;
       border-radius: 10px;
       border: none;
       font-size: 16px;
       font-weight: 600;
       background-color: $secondary-color;
       cursor: pointer;
+      text-wrap: none;
     }
 
     .active {

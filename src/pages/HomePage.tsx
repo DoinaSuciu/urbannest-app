@@ -56,26 +56,23 @@ const HomePage = () => {
       <div className={classes['banner-container']}>
         <img src={bannerImg} alt="banner" />
         <div className={classes['banner-text']}>
-          <span>New Arrival</span>
-          <h2 className={classes['banner-title']}>Discover Out New Collection</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-            luctus nec ullamcorper mattis.
-          </p>
+          <span>Nou</span>
+          <h2 className={classes['banner-title']}>Mobilier Living</h2>
+          <p>Descoperă cele mai noi piese de mobilier pentru living</p>
           <Button
             style={{ weight: 222, height: 74, fontSize: 16 }}
             type="button"
             onClick={shopNow}
             primaryColorButton
           >
-            Shop now
+            Cumpără acum
           </Button>
         </div>
       </div>
 
       <div className={classes['browse-the-range']}>
-        <h2>Browse The Range</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <h2>Shop the look - Inspirație pentru acasă</h2>
+        <p>Descoperă-le și inspirăte din selecția noastră.</p>
         <div className={classes['rooms-list']}>
           <div className={classes['room-type']}>
             <img src={diningRoomImg} alt="Dining" />
@@ -87,13 +84,13 @@ const HomePage = () => {
           </div>
           <div className={classes['room-type']}>
             <img src={bedroomImg} alt="Bedroom" />
-            <h3>Bedroom</h3>
+            <h3>Dormitor</h3>
           </div>
         </div>
       </div>
 
       <div className={classes['our-products']}>
-        <h2>Our products</h2>
+        <h2>Produsele noastre</h2>
         <ul>
           {products.slice(0, numberOfItemsShown).map((product) => (
             <ProductCard
@@ -116,18 +113,19 @@ const HomePage = () => {
           onClick={showMore}
           primaryColorButton={false}
         >
-          Show More
+          Arată mai multe
         </Button>
       </div>
 
       <div className={classes['beautiful-rooms']}>
         <div>
-          <h2>50+ Beautiful rooms inspiration</h2>
+          <h2>Găsește-ți inspirația în funcție de stil</h2>
           <p>
-            Our designer already made a lot of beautiful prototype of rooms that inspire
-            you
+            Preferi stilul modern sau clasic? Te impresionează un decor natural spirit sau
+            mai degrabă unul romantic? Descoperă idei de amenajare în funcție de stilul
+            tău preferat.
           </p>
-          <button>Explore More</button>
+          <button>Descoperă mai multe</button>
         </div>
         <div className={classes['bedroom-inspiration']}>
           <img src={roomsInspirationImg} alt="Bed room design" />
@@ -135,8 +133,8 @@ const HomePage = () => {
             className={`${helpers.flex} ${helpers.absolute} 'bedroom-inspiration-description`}
           >
             <div className={classes['bedroom-inspiration-short-text']}>
-              <p>01 - Bed Room</p>
-              <h3>Inner Peace</h3>
+              <p>01 - Dormitor</p>
+              <h3>Spațiu propriu</h3>
             </div>
             <button>
               <img src={nextPage} alt="next page" />
@@ -153,7 +151,7 @@ const HomePage = () => {
       </div>
 
       <div className={classes['furniro-furniture-photos']}>
-        <p>Share your setup with</p>
+        <p>Împărtășește experiența cu</p>
         <h2>#FurniroFurniture</h2>
         <div className={classes['furniro-rooms-photos']}>
           <img className={classes.image1} src={furniroRoomsPhoto} alt="room design" />

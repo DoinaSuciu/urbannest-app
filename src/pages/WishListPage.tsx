@@ -33,17 +33,19 @@ const WishListPage = () => {
   }
   return (
     <div className={classes['wishlist-page']}>
-      <BaseBanner fromPage="Home" toPage="Favorites" title="Favorites" />
+      <BaseBanner fromPage="Home" toPage="Favorite" title="Favorite" />
       {favoriteProductIds.length === 0 && (
         <div className={classes['empty-wishlist-container']}>
-          <p>Your wishlist is empty.</p>
-          <p>{`Save the items you like most so you don't lose sight of them.`}</p>
-          <button onClick={handleGetInspired}>Get inspired</button>
+          <p>Lista ta de produse favorite este goală.</p>
+          <p>
+            Salvați articolele care vă plac cel mai mult pentru a nu le pierde din vedere.
+          </p>
+          <button onClick={handleGetInspired}>Insipiră-te</button>
         </div>
       )}
       {favoriteProductIds.length > 0 && (
         <div className={classes['wishlist-container']}>
-          <p>This is the selection of products you like the most.</p>
+          <p>Aceasta este selecția de produse care vă plac cel mai mult.</p>
           <ul>
             {favoriteProducts.map((item) => (
               <FavoriteProductCard

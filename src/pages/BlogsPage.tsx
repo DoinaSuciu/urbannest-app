@@ -6,7 +6,7 @@ import { BlogPosts } from '../state/blogPosts'
 const BlogsPage = () => {
   return (
     <div className={classes.blogPage}>
-      <BaseBanner fromPage="Home" toPage="Blog" title="Blog" />
+      <BaseBanner fromPage="Home" toPage="Inspiră-te" title="Blog" />
       <div className={classes.content}>
         <div className={classes.BlogPosts}>
           {BlogPosts.map((post) => (

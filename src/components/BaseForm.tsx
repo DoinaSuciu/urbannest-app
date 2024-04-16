@@ -43,8 +43,8 @@ const BaseForm: FC = () => {
     <form>
       <BaseInput
         type="text"
-        label="Your name"
-        placeholder="John"
+        label="Numele/Prenumele"
+        placeholder="Ion"
         name="name"
         error={isTouched.name && input.name === ''}
         value={input.name}
@@ -54,7 +54,7 @@ const BaseForm: FC = () => {
 
       <BaseInput
         type="text"
-        label="Email address"
+        label="Adresa de email"
         placeholder="abc@gmail.com"
         name="email"
         error={isTouched.email && input.email === ''}
@@ -65,8 +65,8 @@ const BaseForm: FC = () => {
 
       <BaseInput
         type="text"
-        label="Subject"
-        placeholder="Furniture"
+        label="Subiectul"
+        placeholder="Mobilier pentru casă"
         name="subject"
         error={isTouched.subject && input.subject === ''}
         value={input.subject}
@@ -76,8 +76,8 @@ const BaseForm: FC = () => {
 
       <BaseInput
         type="text"
-        label="Message"
-        placeholder="Hi! I'd like to ask about..."
+        label="Mesajul"
+        placeholder="Salut! Aș vrea să te întreb despre..."
         name="message"
         error={isTouched.message && input.message === ''}
         value={input.message}
@@ -92,7 +92,7 @@ const BaseForm: FC = () => {
         style={{ weight: 237, height: 55, fontSize: 16 }}
         primaryColorButton
       >
-        Submit
+        Trimite
       </Button>
     </form>
   )

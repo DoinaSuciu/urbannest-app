@@ -34,7 +34,7 @@ export default function Login() {
     <form className={classes.login} onSubmit={handleSubmit}>
       <BaseInput
         type="email"
-        label="Email address"
+        label="Adresa de email"
         placeholder="abc@gmail.com"
         name="email"
         error={emailHasError}
@@ -45,8 +45,8 @@ export default function Login() {
 
       <BaseInput
         type="password"
-        label="Password"
-        placeholder="Enter your password"
+        label="Parola"
+        placeholder="Introduceți parola"
         name="password"
         error={passwordHasError}
         value={enteredPassword}

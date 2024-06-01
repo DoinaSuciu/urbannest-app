@@ -10,7 +10,7 @@ import QualityDetailsBanner from '../components/QualityDetailsBanner'
 const ContactPage = () => {
   return (
     <div className={classes['contact-page']}>
-      <BaseBanner fromPage="Home" toPage="Contact" title="Contact" />
+      <BaseBanner fromPage="Acasă" toPage="Contact" title="Contact" />
 
       <div className={classes.content}>
         <div className={classes.info}>

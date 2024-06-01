@@ -98,7 +98,7 @@ export const BlogPosts: BlogType[] = [
   },
   {
     id: 'BP03',
-    title: 'Handmade pieces that took time to make',
+    title: 'Piese handmade pentru casă',
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at
     ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis
@@ -147,7 +147,7 @@ export const BlogPosts: BlogType[] = [
   },
   {
     id: 'BP04',
-    title: 'Modern home in Milan',
+    title: 'Casa modernă din Milano ',
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at
     ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis
@@ -196,7 +196,7 @@ export const BlogPosts: BlogType[] = [
   },
   {
     id: 'BP05',
-    title: 'Colorful office redesign',
+    title: 'Designul interior în aceeași suflare',
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at
     ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis

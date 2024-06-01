@@ -27,7 +27,7 @@ function MainNavigation() {
                 className={({ isActive }) => (isActive ? classes.active : undefined)}
                 end
               >
-                Home
+                Acasă
               </NavLink>
             </li>
             <li>

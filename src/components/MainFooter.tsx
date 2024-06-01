@@ -40,14 +40,14 @@ const MainFooter = () => {
         <section className={`${classes['section-name']} ${classes.newsletter}`}>
           <span>Newsletter</span>
 
-          <div>
-            <input type="text" placeholder="Enter Your Email Address" />
-            <button>SUBSCRIBE</button>
+          <div className={classes.subscribe}>
+            <input type="text" placeholder="Introdu adresa de email" />
+            <button>Abonati-va</button>
           </div>
         </section>
       </div>
       <div className={classes.rights}>
-        <p>2024 URBANNEST. All rights reserved</p>
+        <p>2024 URBANNEST. Toate drepturile rezervate.</p>
       </div>
     </footer>
   )

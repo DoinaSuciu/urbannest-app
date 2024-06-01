@@ -6,7 +6,7 @@ import { BlogPosts } from '../state/blogPosts'
 const BlogsPage = () => {
   return (
     <div className={classes.blogPage}>
-      <BaseBanner fromPage="Home" toPage="Inspiră-te" title="Blog" />
+      <BaseBanner fromPage="Acasă" toPage="Inspiră-te" title="Inspiră-te" />
       <div className={classes.content}>
         <div className={classes.BlogPosts}>
           {BlogPosts.map((post) => (
@@ -25,10 +25,10 @@ const BlogsPage = () => {
         <div className={classes.searchContainer}>
           <form className={classes.search}>
             <input type="search" placeholder="Search..." />
-            <button type="submit">Search</button>
+            <button type="submit">Caută</button>
           </form>
           <div className={classes.categories}>
-            <h2>Categories</h2>
+            <h2>Categorii</h2>
             <ul className={classes.categoriesList}>
               <li>
                 <span>Crafts</span>
@@ -47,14 +47,14 @@ const BlogsPage = () => {
                 <span>1</span>
               </li>
               <li>
-                <span>Wood</span>
+                <span>Lemn</span>
                 <span>6</span>
               </li>
             </ul>
           </div>
 
           <div className={classes.recentPostsContainer}>
-            <h2>Recent Posts</h2>
+            <h2>Postări recente</h2>
             <ul className={classes.recentPosts}>
               <li>
                 <img src={BlogPosts[4].image} alt="Blog post" />

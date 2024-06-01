@@ -38,7 +38,7 @@ const ProductCard: React.FC<FavoriteProductProps> = ({
         <img src={image} alt="product" />
         <p className={classes.productTitle}>{name}</p>
         <span>$ {price * (1 - discount / 100)}</span>
-        <Link to={`/product-view/${id}`}>See the product</Link>
+        <Link to={`/product-view/${id}`}>Vezi produsul</Link>
       </div>
     </li>
   )

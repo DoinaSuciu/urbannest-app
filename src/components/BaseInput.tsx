@@ -40,7 +40,7 @@ const BaseInput: FC<InputProps> = memo(function BaseInput({
         onBlur={onBlur}
         disabled={disabled}
       />
-      {error && <p className={inputClasses.error}>Input filed can not be empty!</p>}
+      {error && <p className={inputClasses.error}>Acest câmp este obligatoriu!</p>}
     </div>
   )
 })

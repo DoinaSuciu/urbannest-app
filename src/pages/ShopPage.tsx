@@ -42,17 +42,17 @@ const ShopPage = () => {
   )
 
   const enum SortType {
-    AllProducts = 'AllProducts',
-    Popularity = 'Popularity',
-    PriceHighToLow = 'PriceHighToLow',
-    PriceLowToHigh = 'PriceLowToHigh'
+    AllProducts = 'Toate produsele',
+    Popularity = 'Popularitate',
+    PriceHighToLow = 'Pret Descrescator',
+    PriceLowToHigh = 'Pret Crescator'
   }
 
   const options: OptionType[] = [
-    { value: SortType.AllProducts, label: 'All products' },
-    { value: SortType.Popularity, label: 'Popularity' },
-    { value: SortType.PriceHighToLow, label: 'Price High to Low' },
-    { value: SortType.PriceLowToHigh, label: 'Price Low to High' }
+    { value: SortType.AllProducts, label: SortType.AllProducts },
+    { value: SortType.Popularity, label: SortType.Popularity },
+    { value: SortType.PriceHighToLow, label: SortType.PriceHighToLow },
+    { value: SortType.PriceLowToHigh, label: SortType.PriceLowToHigh }
   ]
   const [selectedOption, setSelectedOption] = useState<OptionType | null>(options[0])
 
@@ -91,7 +91,7 @@ const ShopPage = () => {
 
   return (
     <div className={shopPageClasses.shopPage}>
-      <BaseBanner fromPage="Home" toPage="Produse" title="Produse" />
+      <BaseBanner fromPage="Acasă" toPage="Produse" title="Produse" />
 
       <div className={shopPageClasses.controlPanel}>
         <div className={shopPageClasses.controlPanelFilter}>

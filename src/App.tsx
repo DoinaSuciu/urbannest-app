@@ -15,6 +15,7 @@ import BlogPostPage from './pages/BlogPostPage'
 import CartPage from './pages/CartPage'
 import AuthenticationPage from './pages/AuthenticationPage'
 import WishListPage from './pages/WishListPage'
+import PageNotFound from './pages/PageNotFound'
 import { store } from './state/store'
 
 const router = createBrowserRouter([
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: 'blog/:blogId',
         element: <BlogPostPage />
+      },
+      {
+        path: '*',
+        element: <PageNotFound />
       }
     ]
   }

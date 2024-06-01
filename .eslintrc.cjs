@@ -6,7 +6,9 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'plugin:testing-library/react',
+    'plugin:vitest/recommended'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
@@ -16,6 +18,9 @@ module.exports = {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     'react-hooks/rules-of-hooks': 'error', // For checking rules of hooks
     'react-hooks/exhaustive-deps': 'warn', // For checking hook dependencies
-    '@typescript-eslint/no-unused-vars': 'off'
+    '@typescript-eslint/no-unused-vars': 'off',
+    'no-unused-vars': 'warn', // warning, not error
+    'vitest/expect-expect': 'off', // eliminate distracting red squiggles while writing tests
+    'react/prop-types': 'off' // turn off props validation
   }
 }

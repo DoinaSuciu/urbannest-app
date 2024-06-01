@@ -33,7 +33,7 @@ const WishListPage = () => {
   }
   return (
     <div className={classes['wishlist-page']}>
-      <BaseBanner fromPage="Home" toPage="Favorite" title="Favorite" />
+      <BaseBanner fromPage="Acasă" toPage="Favorite" title="Favorite" />
       {favoriteProductIds.length === 0 && (
         <div className={classes['empty-wishlist-container']}>
           <p>Lista ta de produse favorite este goală.</p>

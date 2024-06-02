@@ -142,14 +142,16 @@ const ProductPage = () => {
             </span>
           </div>
           <p>{product?.description}</p>
-          <div className={classes['size-container']}>
-            <span>Mărimea</span>
-            <div className={classes['size-list']}>
-              {product?.sizes.map((size) => (
-                <button key={size}>{size}</button>
-              ))}
+          {product?.sizes.length > 0 && (
+            <div className={classes['size-container']}>
+              <span>Mărimea</span>
+              <div className={classes['size-list']}>
+                {product?.sizes.map((size) => (
+                  <button key={size}>{size}</button>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
           {product.list.length > 1 && (
             <div className={classes['color-container']}>
               <span>Culoarea</span>
